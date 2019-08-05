@@ -150,3 +150,16 @@ $enable-shadows: true;
     }
   }
 }
+
+.btn {
+
+  &--go-up {
+
+    transition: 250ms ease-in-out;
+    transform: translateX(150%);
+
+    &.active {
+      transform: translateX(0%);
+    }
+  }
+}

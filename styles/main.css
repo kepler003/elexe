@@ -49034,4 +49034,16 @@ a.text-dark:hover, a.button-dark:hover, a.text-dark:focus, a.button-dark:focus {
 .main__article--installations__sublist-elem a:hover {
   text-decoration: none;
 }
+
+.btn--go-up {
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
+  -webkit-transform: translateX(150%);
+          transform: translateX(150%);
+}
+
+.btn--go-up.active {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
 /*# sourceMappingURL=main.css.map */

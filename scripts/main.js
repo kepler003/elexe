@@ -193,6 +193,22 @@ $('.prev-def').click(function(e){
   e.preventDefault();
 });
 
+// Go up btn
+$(window).scroll(function(){
+
+  let scroll = $(window).scrollTop();
+
+  if(scroll > $('.welcome').outerHeight()){
+
+    $('.btn--go-up').addClass('active');
+
+  } else {
+
+    $('.btn--go-up').removeClass('active');
+  };
+
+});
+
 
 
 
