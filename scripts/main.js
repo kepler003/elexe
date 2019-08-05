@@ -184,15 +184,15 @@ $('.main__article--installations__btn--sublist').click(function(){
     
     // List related styling
     $('.main__article--installations__sublist').slideUp(200);
+    scrollToElement('.main__article--installations__sublist', '70', '400');
   };
 });
 
-// Google Maps API
-function initMap() {
-  // The location of Uluru
-  var uluru = {lat: -25.344, lng: 131.036};
-  // The map, centered at Uluru
-  var map = new google.maps.Map(document.getElementById('map'), {zoom: 4, center: uluru});
-  // The marker, positioned at Uluru
-  var marker = new google.maps.Marker({position: uluru, map: map});
-}
+// Prevent default
+$('.prev-def').click(function(e){
+  e.preventDefault();
+});
+
+
+
+

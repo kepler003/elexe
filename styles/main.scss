@@ -38,9 +38,6 @@ $enable-shadows: true;
 
 
 /////////////////////////////////////// Page styling
-html {
-  scroll-behavior: smooth;
-}
 
 .main {
 
@@ -127,13 +124,29 @@ html {
       background-color: #383838;
 
       &__btn:hover {
-        @extend .bg-light-8;
+        @extend .bg-light-9;
       }
 
       &__btn.active {
         @extend .bg-light-10;
       }
     }
+
+    &--installations {
+
+      &__sublist-elem {
+
+        & a {
+
+          transition: 150ms ease-in-out;
+
+          &:hover {
+            @extend .bg-dark-6;
+
+            text-decoration: none;
+          }
+        }
+      }
+    }
   }
 }
-

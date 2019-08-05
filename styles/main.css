@@ -37661,7 +37661,7 @@ a.text-dark:hover, a.button-dark:hover, a.text-dark:focus, a.button-dark:focus {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-.bg-dark-6 {
+.bg-dark-6, .main__article--installations__sublist-elem a:hover {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -37673,7 +37673,7 @@ a.text-dark:hover, a.button-dark:hover, a.text-dark:focus, a.button-dark:focus {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.bg-light-8, .main__article--offer__btn:hover {
+.bg-light-8 {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
@@ -37681,7 +37681,7 @@ a.text-dark:hover, a.button-dark:hover, a.text-dark:focus, a.button-dark:focus {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.bg-light-9 {
+.bg-light-9, .main__article--offer__btn:hover {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
@@ -38070,8 +38070,8 @@ a.text-dark:hover, a.button-dark:hover, a.text-dark:focus, a.button-dark:focus {
 }
 
 .bg-gradient {
-  background: -webkit-gradient(linear, left top, right bottom, from(#6d6d6d), to(#2e2e2e));
-  background: linear-gradient(to bottom right, #6d6d6d, #2e2e2e);
+  background: -webkit-gradient(linear, left top, right bottom, from(#838383), to(#202020));
+  background: linear-gradient(to bottom right, #838383, #202020);
 }
 
 @media (min-width: 576px) {
@@ -48967,10 +48967,6 @@ a.text-dark:hover, a.button-dark:hover, a.text-dark:focus, a.button-dark:focus {
   background-color: #1097E4;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 .main__article__photo--about {
   position: relative;
   z-index: 1;
@@ -49028,5 +49024,14 @@ html {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-color: #383838;
+}
+
+.main__article--installations__sublist-elem a {
+  -webkit-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
+}
+
+.main__article--installations__sublist-elem a:hover {
+  text-decoration: none;
 }
 /*# sourceMappingURL=main.css.map */
