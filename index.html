@@ -7,16 +7,485 @@
   <title>Elexe</title>
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-  <script src="/jquery/dist/jquery.js" type="text/javascript"></script>
-  <script src="/popper.js/dist/umd/popper.js" type="text/javascript"></script>
-  <script src="/bootstrap/dist/js/bootstrap.js" type="text/javascript"></script>
-  <script src="/validator-js/validator.min.js" type="text/javascript"></script>
+  <script src="/bower_components/jquery/dist/jquery.js" type="text/javascript"></script>
+  <script src="/bower_components/popper.js/dist/umd/popper.js" type="text/javascript"></script>
+  <script src="/bower_components/bootstrap/dist/js/bootstrap.js" type="text/javascript"></script>
+  <script src="/bower_components/validator.js/dist/validator.min.js" type="text/javascript"></script>
   <link href="/styles/main.css" rel="stylesheet" type="text/css">
 
 </head>
 <body>
 
-  
+  <div class="container-fluid   p-0">
+    
+    <!-- Header -->
+    <header class="box box-center-y   w-100   p-2   bg-white   position-sticky top-0 left-0   z-index-10">
+      
+      <!-- Elexe logo -->
+      <a href="www.elexe.pl" class="box box-center   w-80p">
+        <img src="images/elexe.png" class="w-100" alt="Elexe logo">
+      </a>
+
+      <!-- Nav -->
+      <nav class="box box-center   ml-auto">
+
+        <a href="#about" class="btn btn-outline-primary   box box-center   w-40p h-40p   border-0   position-relative">
+          <span class="position-absolute">
+            <i class="fas fa-user"></i>
+          </span>
+        </a>
+
+        <a href="#" class="btn btn-outline-primary   box box-center   w-40p h-40p   border-0   position-relative">
+          <span class="position-absolute">
+            <i class="fas fa-tags"></i>
+          </span>
+        </a>
+
+        <a href="#" class="btn btn-outline-primary   box box-center   w-40p h-40p   border-0   position-relative">
+          <span class="position-absolute">
+            <i class="fas fa-tools"></i>
+          </span>
+        </a>
+
+        <a href="#" class="btn btn-outline-primary   box box-center   w-40p h-40p   border-0   position-relative">
+          <span class="position-absolute">
+            <i class="fas fa-map-marker-alt"></i>
+          </span>
+        </a>
+
+        <a href="#" class="btn btn-outline-primary   box box-center   w-40p h-40p   border-0   position-relative">
+          <span class="position-absolute">
+            <i class="fas fa-envelope"></i>
+          </span>
+        </a>
+
+      </nav>
+      
+    </header>
+
+    <!-- Main -->
+    <main class="box   w-100">
+
+      <!-- About us -->
+      <article id="about" class="box box-start   w-100   p-4   bg-gradient text-white">
+        
+        <!-- Header -->
+        <header class="box box-center   w-100   mb-4 py-3">
+          <h2 class="h4">O firmie</h2>
+        </header>
+        
+        <!-- Body -->
+        <div>
+
+          <div>
+
+            <div class="main__article__photo--about">
+
+              <img src="images/inside.jpg" class="w-100" alt="Inside the house">
+
+            </div>
+
+            <p class="mt-4   text-justify">
+                Na rynku usług elektroinstalacyjnych działamy już <time datetime="1996"><strong>od 1996 roku.</strong></time>
+                Zajmujemy się nie tylko kompleksowym wykonywaniem instalacji elektrotechnicznych, 
+                lecz również ich modernizacją oraz pomiarami ich parametrów elektrycznych 
+                oraz oświetleniowych. Podczas naszych prac zwracamy szczególną uwagę na <strong>profesjonalizm</strong>, 
+                <strong>bezpieczeństwo użytkownika</strong> oraz <strong>estetykę wykonania</strong>.
+            </p>
+
+          </div>
+            
+          <div class="mt-5">
+
+            <div class="main__article__photo--about--alt">
+
+              <img src="images/house.jpg" class="w-100" alt="Inside the house">
+
+            </div>
+
+            <p class="mt-4   text-justify">
+                <strong>Doświadczenie</strong> zdobyte przez te lata oraz <strong>mnogość nietypowych zleceń</strong> przez nas wykonanych 
+                pozwala nam na wykonywanie ich w taki sposób by nie narażać klientów na dodatkowe koszty 
+                oraz udzielać im <strong>fachowych porad</strong> podczas projektu. Powyższe cechy to te, na które należy 
+                zwrócić szczególną uwagę podczas wyboru swojego elektryka na dzisiejszym rynku.
+            </p>
+
+          </div>
+
+        </div>
+
+      </article>
+
+      <!-- Offer -->
+      <article id="offer" class="main__article--offer   box   w-100">
+
+        <!-- Header -->
+        <header class="box box-center   w-100   py-4   bg-light-7 text-primary">
+          <h2 class="my-3   h4">Oferta</h2>
+        </header>
+
+        <!-- Body -->
+        <div class="box box-center   w-100   px-3">
+          
+          <!-- Btns -->
+          <div class="box box-center   w-100   py-1">
+
+            <button type="button" class="main__article--offer__btn main__article--offer__btn--installations active   btn   box box-center   col   my-1 mr-1 py-4   bg-light-7 rounded-0 text-primary"
+                  onclick="changeDisplay('#installations, #measurements, #service', 'fadeIn, hide, hide', '400, 0, 0'); addClass('.main__article--offer__btn--installations', 'active'); removeClass('.main__article--offer__btn--measurements, .main__article--offer__btn--service', 'active, active'); scrollToElement('#offer', '70', '400');">
+              <span class="mb-0   h3">
+                <i class="far fa-lightbulb"></i>
+              </span>
+            </button>
+
+            <button type="button" class="main__article--offer__btn main__article--offer__btn--measurements   btn   box box-center   col   m-1 py-4   bg-light-7 rounded-0 text-primary"
+                  onclick="changeDisplay('#installations, #measurements, #service', 'hide, fadeIn, hide', '0, 400, 0'); addClass('.main__article--offer__btn--measurements', 'active'); removeClass('.main__article--offer__btn--installations, .main__article--offer__btn--service', 'active, active'); scrollToElement('#offer', '70', '400');">
+              <span class="mb-0   h3">
+                <i class="fas fa-plug"></i>
+              </span>
+            </button>
+
+            <button type="button" class="main__article--offer__btn main__article--offer__btn--service   btn   box box-center   col   my-1 ml-1 py-4   bg-light-7 rounded-0 text-primary"
+                  onclick="changeDisplay('#installations, #measurements, #service', 'hide, hide, fadeIn', '0, 0, 400'); addClass('.main__article--offer__btn--service', 'active'); removeClass('.main__article--offer__btn--measurements, .main__article--offer__btn--installations', 'active, active'); scrollToElement('#offer', '70', '400');">
+              <span class="mb-0   h3">
+                <i class="fas fa-tools"></i>
+              </span>
+            </button>
+
+          </div>
+          
+          <!-- Instalacje section -->
+          <section id="installations" class="w-100   px-3 py-2   bg-light-7" style="display: none;">
+
+            <p>
+                Wykonujemy instalacje elektryczne na terenie <strong>Krakowa i okolic</strong> w <strong>prywatnych domach</strong>, 
+                <strong>lokalach</strong>, <strong>biurach</strong> i <strong>innych obiektach</strong>. Zapewniamy przy tym <strong>fachową pomoc</strong> oraz <strong>porady</strong> 
+                podczas procesu projektowania jak i samego montażu. <br> Do naszej oferty należy między innymi:
+            </p>
+
+            <ul class="m-0 py-0 pl-3">
+              <li class="mt-2">wykonywanie przyłączy nowych obiektów na terenie Krakowskiego Zakładu ENION,</li>
+              <li class="mt-2">wykonywanie i modernizacje instalacji odgromowych,</li>
+              <li class="mt-2">instalacji elektrycznego ogrzewania podłogowego,</li>
+              <li class="mt-2">instalacji pod bramy wjazdowe (przesuwne i skrzydłowe), systemy alarmowe i domofonowe oraz lokalne sieci komputerowe,</li>
+              <li class="mt-2">instalacji oświetlenia zewnętrznego w tym oświetlenia ogrodowego,</li>
+              <li class="mt-2">modernizacja oświetlenia (między innymi lamp świetlówkowych) w technologii LED.</li>
+            </ul>
+
+            <br>
+
+            <p>
+                Aby zapoznać się z <strong>pełną ofertą i poznać szczegóły</strong> realizacji Twojego zlecenia, 
+                <strong>skontaktuj się z nami</strong> telefonicznie [606 949 213] albo opisz swoje zapytanie w 
+                formularzu kontaktowym lub poprzez email.
+            </p>
+
+          </section>
+          
+          <!-- Pomiary section -->
+          <section id="measurements" class="w-100   px-3 py-2   bg-light-7" style="display: none;">
+
+            <p>
+                Oferujemy <strong>okresowe pomiary instalacji elektrycznej</strong> w Krakowie pobliżu małopolski 
+                we wszelkich obiektach by zapewnić bezpieczeństwo eksploatacji oraz <strong>zgodność 
+                dokumentacji z aktualnymi przepisami oraz normami</strong>. Przegląd instalacji elektrycznej 
+                wykonujemy nie tylko z <strong>dbałością o kwestie prawne</strong>, lecz tak, aby zapewnić jej 
+                <strong>bezawaryjne działanie w praktyce</strong> oraz wyeliminować ewentualne niezgodności <strong>możliwie 
+                niskim kosztem</strong>. <br> Nasze usługi w tym zakresie to między innymi:
+            </p>
+
+            <ul class="m-0 py-0 pl-3">
+              <li class="mt-2">pomiary skuteczności ochrony przeciwporażeniowej (pomiary skuteczności zerowania),</li>
+              <li class="mt-2">pomiary izolacji urządzeń i instalacji elektrycznych,</li>
+              <li class="mt-2">pomiary natężenia oświetlenia,</li>
+              <li class="mt-2">pomiary instalacji elektrycznych zabezpieczonych wyłącznikiem różnicowoprądowym.</li>
+            </ul>
+
+            <br>
+
+            <p>
+              W naszej ofercie posiadamy również <strong>mniej typowe badania</strong> jak pomiar rezystancji węży 
+              nalewczych, więc <strong>zapraszamy do bezpośredniego kontaktu z nami</strong> w celu przedstawienia 
+              szczegółowej oferty oraz zapoznania z cennikiem usług.
+            </p>
+
+          </section>
+          
+          <!-- Serwis section -->
+          <section id="service" class="w-100   px-3 py-2   bg-light-7">
+
+            <p>
+                <strong>Eliminujemy wszelkie usterki</strong> instalacji elektrycznych nie tylko na terenie okolic 
+                Krakowa. <br> <br> <strong>Doświadczenie</strong> zdobyte na przełomie <strong>wielu lat działalności</strong> pozwala nam na 
+                <strong>sprawne zdiagnozowanie</strong> nietypowych nieprawidłowości działania elektryki we wszelkiego 
+                rodzaju obiektach. <br> <br> Naprawy wykonujemy tak, aby <strong>zminimalizować ingerencję w istniejącą 
+                infrastrukturę</strong> oraz <strong>nie narażać klientów na dodatkowe koszty</strong>. <br> <br> <strong>Skontaktuj się z nami</strong>
+                żeby zasięgnąć porady związanej z awarią instalacji.
+            </p>
+
+          </section>
+
+        </div>
+
+      </article>
+
+      <!-- Implementations -->
+      <article class="box   w-100   p-4   bg-gradient">
+
+        <!-- Header -->
+        <header class="box box-center   w-100 w-max-600p   mx-auto">
+          <h2 class="w-100   mb-4   text-white text-center h4">Dołącz do grona firm, które powierzyły nam relaizację zleconych zadań</h2>
+        </header>
+
+        <!-- Body -->
+        <section class="box   w-100">
+
+          <ul class="list-unstyled   box   w-100 w-max-900p   mx-auto">
+
+            <li class="box box-center   col   w-min-200p   m-1   bg-dark-4">
+              <a href="http://www.google.com/search?q=Empik+Galeria+Kazimierz+Kraków" target="_blank" class="box box-center   w-100 h-100   p-3   text-center text-white">
+                Empik - Galeria Kazimierz, Kraków
+              </a>
+            </li>
+
+            <li class="box box-center   col   w-min-200p   m-1   bg-dark-4">
+              <a href="http://www.google.com/search?q=Kancelaria+radców+prawnych+Kraków" target="_blank" class="box box-center   w-100 h-100   p-3   text-center text-white">
+                Kancelaria radców prawnych, Kraków
+              </a>
+            </li>
+
+            <li class="box box-center   col   w-min-200p   m-1   bg-dark-4">
+              <a href="http://www.google.com/search?q=Przedszkole+Nr+26+Sióstr+Serafitek+Kraków" target="_blank" class="box box-center   w-100 h-100   p-3   text-center text-white">
+                Przedszkole Nr 26 Sióstr Serafitek, Kraków
+              </a>
+            </li>
+
+            <li class="box box-center   col   w-min-200p   m-1   bg-dark-4">
+              <a href="http://www.google.com/search?q=Excellent+S+A+Kraków" target="_blank" class="box box-center   w-100 h-100   p-3   text-center text-white">
+                Excellent S.A., Kraków
+              </a>
+            </li>
+
+            <li class="box box-center   col   w-min-200p   m-1   bg-dark-4">
+              <a href="http://www.google.com/search?q=Przedsiębiorstwo+Wielobranżowe+ELZET+Krzeszowice" target="_blank" class="box box-center   w-100 h-100   p-3   text-center text-white">
+                Przedsiębiorstwo Wielobranżowe ELZET, Krzeszowice
+              </a>
+            </li>
+
+            <li class="box box-center   col   w-min-200p   m-1   bg-dark-4">
+              <a href="http://www.google.com/search?q=Oświatowe+Towarzystwo+Integracyjne+Radwanowice" target="_blank" class="box box-center   w-100 h-100   p-3   text-center text-white">
+                Oświatowe Towarzystwo Integracyjne, Radwanowice
+              </a>
+            </li>
+
+            <li class="box box-center   col   w-min-200p   m-1   bg-dark-4">
+              <a href="http://www.google.com/search?q=EXCELLENT+S+A+Kraków" target="_blank" class="box box-center   w-100 h-100   p-3   text-center text-white">
+                EXCELLENT S.A., Kraków
+              </a>
+            </li>
+
+            <li class="box box-center   col   w-min-200p   m-1   bg-dark-4">
+              <a href="http://www.google.com/search?q=F+Usługi+Pośrednictwo+Handel+Krzeszowice" target="_blank" class="box box-center   w-100 h-100   p-3   text-center text-white">
+                F. Usługi - Pośrednictwo - Handel, Krzeszowice
+              </a>
+            </li>
+            
+            <div class="main__article--installations__sublist   box box-center w-100" style="display: none;">
+
+              <li class="box box-center   col   w-min-200p   m-1   bg-dark-4">
+                <a href="http://www.google.com/search?q=Mix+Serwis+Rzeszów" target="_blank" class="box box-center   w-100 h-100   p-3   text-center text-white">
+                  Mix Serwis, Rzeszów
+                </a>
+              </li>
+
+              <li class="box box-center   col   w-min-200p   m-1   bg-dark-4">
+                <a href="http://www.google.com/search?q=Przedszkole+Nr+26+Sióstr+Serafitek+Kraków" target="_blank" class="box box-center   w-100 h-100   p-3   text-center text-white">
+                  Przedszkole Nr 26 Sióstr Serafitek, Kraków
+                </a>
+              </li>
+
+              <li class="box box-center   col   w-min-200p   m-1   bg-dark-4">
+                <a href="http://www.google.com/search?q=MTO+Sp+z+o+o+Warszawa" target="_blank" class="box box-center   w-100 h-100   p-3   text-center text-white">
+                  MTO Sp. z o.o, Warszawa
+                </a>
+              </li>
+
+              <li class="box box-center   col   w-min-200p   m-1   bg-dark-4">
+                <a href="http://www.google.com/search?q=EMPIK+Galeria+Kazimierz+Kraków" target="_blank" class="box box-center   w-100 h-100   p-3   text-center text-white">
+                  EMPIK - Galeria Kazimierz, Kraków
+                </a>
+              </li>
+
+              <li class="box box-center   col   w-min-200p   m-1   bg-dark-4">
+                <a href="http://www.google.com/search?q=POLSKI+ASFALT+TECHNIC+sp+z+o+o+Kraków" target="_blank" class="box box-center   w-100 h-100   p-3   text-center text-white">
+                  POLSKI ASFALT TECHNIC sp. z o.o., Kraków
+                </a>
+              </li>
+
+              <li class="box box-center   col   w-min-200p   m-1   bg-dark-4">
+                <a href="http://www.google.com/search?q=HARDY+MULTISERWIS+Kraków" target="_blank" class="box box-center   w-100 h-100   p-3   text-center text-white">
+                  HARDY MULTISERWIS, Kraków
+                </a>
+              </li>
+
+              <li class="box box-center   col   w-min-200p   m-1   bg-dark-4">
+                <a href="http://www.google.com/search?q=F+H+U+TARMIZ+Kraków" target="_blank" class="box box-center   w-100 h-100   p-3   text-center text-white">
+                  F.H.U. 'TARMIZ', Kraków
+                </a>
+              </li>
+
+              <li class="box box-center   col   w-min-200p   m-1   bg-dark-4">
+                <a href="http://www.google.com/search?q=Wspólnota+Mieszkaniowa+Wieniawskiego+62+Kraków" target="_blank" class="box box-center   w-100 h-100   p-3   text-center text-white">
+                  Wspólnota Mieszkaniowa 'Wieniawskiego 62', Kraków
+                </a>
+              </li>
+
+              <li class="box box-center   col   w-min-200p   m-1   bg-dark-4">
+                <a href="http://www.google.com/search?q=Przedsiębiorstwo+Winiarskie+LPDV+Sp+z+o+o+Warszawa" target="_blank" class="box box-center   w-100 h-100   p-3   text-center text-white">
+                  Przedsiębiorstwo Winiarskie LPDV Sp. z o.o., Warszawa
+                </a>
+              </li>
+
+              <li class="box box-center   col   w-min-200p   m-1   bg-dark-4">
+                <a href="http://www.google.com/search?q=Galeria+Krakowska" target="_blank" class="box box-center   w-100 h-100   p-3   text-center text-white">
+                  Galeria Krakowska
+                </a>
+              </li>
+
+              <li class="box box-center   col   w-min-200p   m-1   bg-dark-4">
+                <a href="http://www.google.com/search?q=Sklep+LATONA+Trawniczek+Sp+J+Kraków" target="_blank" class="box box-center   w-100 h-100   p-3   text-center text-white">
+                  Sklep LATONA Trawniczek Sp.J., Kraków
+                </a>
+              </li>
+
+              <li class="box box-center   col   w-min-200p   m-1   bg-dark-4">
+                <a href="http://www.google.com/search?q=Małopolski+Ośrodek+Doradztwa+Rolniczego+w+Karniowicach" target="_blank" class="box box-center   w-100 h-100   p-3   text-center text-white">
+                  Małopolski Ośrodek Doradztwa Rolniczego w Karniowicach
+                </a>
+              </li>
+
+              <li class="box box-center   col   w-min-200p   m-1   bg-dark-4">
+                <a href="http://www.google.com/search?q=RAN+Przedsiębiorstwo+Handlowe+Kraków" target="_blank" class="box box-center   w-100 h-100   p-3   text-center text-white">
+                  'RAN' Przedsiębiorstwo Handlowe, Kraków
+                </a>
+              </li>
+
+              <li class="box box-center   col   w-min-200p   m-1   bg-dark-4">
+                <a href="http://www.google.com/search?q=Osiedle+domów+jednorodzinnych+w+Rząsce" target="_blank" class="box box-center   w-100 h-100   p-3   text-center text-white">
+                  Osiedle domów jednorodzinnych w Rząsce
+                </a>
+              </li>
+
+              <li class="box box-center   col   w-min-200p   m-1   bg-dark-4">
+                <a href="http://www.google.com/search?q=HARDY+MULTISERWIS+Wrocław" target="_blank" class="box box-center   w-100 h-100   p-3   text-center text-white">
+                  HARDY MULTISERWIS , Wrocław
+                </a>
+              </li>
+
+              <li class="box box-center   col   w-min-200p   m-1   bg-dark-4">
+                <a href="http://www.google.com/search?q=Szkoła+Podstawowa+w+Bolechowicach" target="_blank" class="box box-center   w-100 h-100   p-3   text-center text-white">
+                  Szkoła Podstawowa w Bolechowicach
+                </a>
+              </li>
+
+            </div>
+
+          </ul>
+
+          <!-- See more -->
+          <button type="button" class="main__article--installations__btn--sublist   btn   box box-center   col   m-1 p-2   bg-dark-4 text-white rounded-0"
+                data-state="show">
+            <span class="mr-2   opacity-5">Więcej</span>
+            <span class="opacity-5">
+              <i class="fas fa-chevron-down"></i>
+            </span>
+          </button>
+
+        </section>
+
+      </article>
+
+      <!-- Contact -->
+      <article class="box box-center-x   w-100   px-1">
+        
+        <!-- Header -->
+        <header class="box box-center   w-100   py-4   bg-light-7 text-primary">
+          <h2 class="my-3   h4">Kontakt</h2>
+        </header>
+
+        <!-- Specific info -->
+        <section class="box   col w-min-280p w-min-sm-300p w-max-400p   px-4 pb-4">
+          
+          <address>
+            <ul class="list-unstyled   w-100   pl-0">
+                <li><span class="text-primary">ELEXE</span> Jacek Matysik</li>
+                <li>32-064 Radwanowice</li>
+                <li>ul. Rycerska 4</li>
+                <br>
+                <li><span class="text-primary">tel:</span> 606-949-213</li>
+                <li><span class="text-primary">mail:</span> j.matysik68@gmail.com</li>
+                <li><span class="text-primary">NIP:</span> 4525456842</li>
+                <li><a href="www.elexe.pl">www.elexe.pl</a></li>
+              </ul>
+          </address>
+
+        </section>
+
+        <!-- Contact form -->
+        <section class="box   col w-min-280p w-min-sm-300p w-max-400p   px-4 pb-4">
+          
+          <header class="box box-center   w-100   mb-4 px-4">
+            <h2 class="box box-center   w-100    h5 text-center text-primary">Masz pytanie? <br class="d-sm-none">Zadaj je nam</h2>
+          </header>
+
+          <form class="box   w-100">
+
+            <div class="form-group   w-100">
+              <input type="email" class="form-control   w-100" placeholder="Email">
+            </div>
+
+            <div class="form-group   w-100">
+              <textarea class="form-control   w-100" rows="7" placeholder="Treść"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary   w-min-100p   mx-auto   rounded-10rem">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>
+
+      <!-- Find us -->
+      <article class="box   w-100">
+
+        <!-- Header -->
+        <header class="box box-center   w-100   py-4   text-primary">
+          <h2 class="my-3   h4">Znajdź nas</h2>
+        </header>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d275169.00399678265!2d19.50344909416446!3d50.15164789624368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716f76e16e00f81%3A0x926c32097041f5fb!2sRycerska%2C+32-064!5e0!3m2!1spl!2spl!4v1565031546766!5m2!1spl!2spl"
+              class="w-100 h-400p" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+      </article>
+
+    </main>
+
+    <footer class="box   w-100   p-2   bg-dark-8 text-white small">
+
+      <p class="w-100 w-max-200p   mr-auto mb-0">
+          &copy; 2019 Elexe
+      </p>
+
+      <p class="w-100 w-max-200p   mb-0">
+          Realizacja <a href="https://www.facebook.com/bartek.pyzocha">Bartłomiej Pyzocha</a>
+      </p>
+
+    </footer>
+
+  </div>
   
 </body>
+<script src="scripts/main.js"></script>
 </html>
