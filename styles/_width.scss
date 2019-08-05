@@ -1,0 +1,123 @@
+
+
+
+// Width
+
+.w {
+
+    &-auto { width: auto !important; }
+    &-max-inherit { max-width: inherit !important; }
+    &-max-stretch { max-width: stretch !important; }
+
+    @for $i from 3 through 20 {
+        &-#{$i}00p { width: 100px * $i !important }
+        &-max-#{$i}00p { max-width: 100px * $i !important }
+        &-min-#{$i}00p { min-width: 100px * $i !important }
+    }
+
+    @for $i from 1 through 30 {
+        @for $j from 0 through 1 {
+            &-#{$i}#{$j*5}p { width: 0px + $i * 10 + ($j * 5) !important; }
+            &-min-#{$i}#{$j*5}p { min-width: 0px + $i * 10 + ($j * 5) !important; }
+            &-max-#{$i}#{$j*5}p { max-width: 0px + $i * 10 + ($j * 5) !important; }
+        }
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    
+    .w {
+
+        &-sm-auto { width: auto !important; }
+        &-max-sm-inherit { max-width: inherit !important; }
+        &-max-sm-stretch { max-width: stretch !important; }
+
+        @for $i from 3 through 20 {
+            &-sm-#{$i}00p { width: 100px * $i !important }
+            &-max-sm-#{$i}00p { max-width: 100px * $i !important }
+            &-min-sm-#{$i}00p { min-width: 100px * $i !important }
+        }
+    
+        @for $i from 1 through 30 {
+            @for $j from 0 through 1 {
+                &-sm-#{$i}#{$j*5}p { width: 0px + $i * 10 + ($j * 5) !important; }
+                &-min-sm-#{$i}#{$j*5}p { min-width: 0px + $i * 10 + ($j * 5) !important; }
+                &-max-sm-#{$i}#{$j*5}p { max-width: 0px + $i * 10 + ($j * 5) !important; }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    
+    .w {
+        
+        &-md-auto { width: auto !important; }
+        &-max-md-inherit { max-width: inherit !important; }
+        &-max-md-stretch { max-width: stretch !important; }
+    
+        @for $i from 3 through 20 {
+            &-md-#{$i}00p { width: 100px * $i !important }
+            &-max-md-#{$i}00p { max-width: 100px * $i !important }
+            &-min-md-#{$i}00p { min-width: 100px * $i !important }
+        }
+    
+        @for $i from 1 through 30 {
+            @for $j from 0 through 1 {
+                &-md-#{$i}#{$j*5}p { width: 0px + $i * 10 + ($j * 5) !important; }
+                &-min-md-#{$i}#{$j*5}p { min-width: 0px + $i * 10 + ($j * 5) !important; }
+                &-max-md-#{$i}#{$j*5}p { max-width: 0px + $i * 10 + ($j * 5) !important; }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+
+    .w {
+        
+        &-lg-auto { width: auto !important; }
+        &-max-lg-inherit { max-width: inherit !important; }
+        &-max-lg-stretch { max-width: stretch !important; }
+
+        @for $i from 3 through 20 {
+            &-lg-#{$i}00p { width: 100px * $i !important }
+            &-max-lg-#{$i}00p { max-width: 100px * $i !important }
+            &-min-lg-#{$i}00p { min-width: 100px * $i !important }
+        }
+    
+        @for $i from 1 through 30 {
+            @for $j from 0 through 1 {
+                &-lg-#{$i}#{$j*5}p { width: 0px + $i * 10 + ($j * 5) !important; }
+                &-min-lg-#{$i}#{$j*5}p { min-width: 0px + $i * 10 + ($j * 5) !important; }
+                &-max-lg-#{$i}#{$j*5}p { max-width: 0px + $i * 10 + ($j * 5) !important; }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    
+    .w {
+        
+        &-xl-auto { width: auto !important; }
+        &-max-xl-inherit { max-width: inherit !important; }
+        &-max-xl-stretch { max-width: stretch !important; }
+    
+        @for $i from 3 through 20 {
+            &-xl-#{$i}00p { width: 100px * $i !important }
+            &-max-xl-#{$i}00p { max-width: 100px * $i !important }
+            &-min-xl-#{$i}00p { min-width: 100px * $i !important }
+        }
+    
+        @for $i from 1 through 30 {
+            @for $j from 0 through 1 {
+                &-xl-#{$i}#{$j*5}p { width: 0px + $i * 10 + ($j * 5) !important; }
+                &-min-xl-#{$i}#{$j*5}p { min-width: 0px + $i * 10 + ($j * 5) !important; }
+                &-max-xl-#{$i}#{$j*5}p { max-width: 0px + $i * 10 + ($j * 5) !important; }
+            }
+        }
+    }
+}
+    
+
